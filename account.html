@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,70.4,673;1,70.4,673&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Account</title>
+</head>
+<body>
+    <section style="width: 100%;" class="MyAccount">
+        <article class="MyAccount-article1">
+            <h1>my account</h1>
+            <div class="links">
+                <a href="index.html ">Home</a>
+                <i class="fa-solid fa-arrow-right-long" style="color: #979797;"></i>
+                <p>my account</p>
+            </div>
+        </article>
+        <article class="MyAccount-article2">
+            <div class="login">
+                <h3>Login</h3>
+            <form action="index.html" method="get" >
+                <label for="email1">email address</label>
+                <input type="text" id="email1" placeholder="Enter your email address..." required>
+                <label for="pass1">Password</label>
+                <input type="password" id="pass1" placeholder="Enter your password..." required>
+                <div class="last-login">
+                <div class="rem-me">
+                <input type="checkbox" id="box" >
+                <label id="box-label" style="color: rgb(94, 94, 94);" for="box">Remember me</label>
+                </div>
+                    <a href="">Lost your password?</a>
+                </div>
+                <input type="submit" value="Log in">
+            </form>
+            </div>
+            <div class="border" style="border: 1px solid #979797;"></div>
+            <div class="rigester">
+                <h3>Register</h3>
+                <form action="">
+                    <label for="email2">email address</label>
+                    <input type="text" name="EMail2" id="email2" placeholder="Enter your email address..." required>
+                    <label for="pass2">Password</label>
+                    <input type="password" name="passWord2" id="pass2" placeholder="Enter your password..." required>
+                    <label for="num">Phone Number</label>
+                    <input type="text" name="phoneNumber" id="num" placeholder="Enter your phone number..." required>
+                    <input type="submit" value="Rigester">
+                </form>
+            </div>
+        </article>
+    </section>
+    <script src="account.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  :root {
+    --primary: #f65d4e;
+    --primary_hover: #f4402f;
+    --text: #444444;
+    --accent: #000000;
+    --lighter: #999999;
+    --border: #e6e6e6;
+  }
+  body {
+    font-family: "Roboto", system-ui;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 20rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary_hover);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules  */
+  /* Start Header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+  }
+  .header .links {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-evenly;
+  }
+  .header-group-action li {
+    cursor: pointer;
+  }
+  .d-none-cart-logout {
+    display: none;
+  }
+  
+  .header .links a:hover {
+    color: var(--primary_hover);
+  }
+  .header .links li a {
+    font-weight: bold;
+    color: var(--accent);
+  }
+  .header .header-group-action {
+    display: flex;
+    align-items: center;
+  }
+  .header .header-group-action li {
+    padding-left: 20px;
+  }
+  .header .header-group-action li:not(:last-child) {
+    border-right: solid 1px var(--lighter);
+    padding-right: 20px;
+  }
+  .header .header-group-action li a {
+    color: var(--accent);
+  }
+  .header .header-group-action li a:hover {
+    color: var(--primary_hover);
+  }
+  @media (max-width: 768px) {
+    .header .container {
+      justify-content: space-around;
+    }
+    .header .container .bar {
+      font-size: 20px;
+      display: block !important;
+    }
+    .header .links {
+      display: none;
+    }
+    .header .header-group-action li:not(:last-child) {
+      display: none;
+    }
+    .header .header-group-action li:last-child {
+      font-size: 20px;
+    }
+  }
+  /* End Header */
+  /*Start banner */
+  .banner {
+    background-color: #F0F0F0;
+  }
+  .banner h1 {
+    font-weight: 600;
+    font-size: 60px;
+  }
+  .banner .cart_text {
+    color: var(--primary_hover);
+  }
+  .banner .home_text a {
+      color: var(--lighter);
+    }
+.banner .home_text a:hover {
+  color: black;
+}
+  /*End banner */
+  /* start product_content */
+  .product_content table img {
+    width: 75px;
+  }
+  .product_content .delete_cart:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 1200px) {
+    .product_content tbody .text_product {
+      margin-top: 25px;
+    }
+  }
+  /* end product_content */
+  /*        footer       */
+.footer div>h1{
+  color: var(--accent);
+}
+.footer h2.phone{
+  color: var(--primary);
+}
+.footer p{
+  color: var(--lighter);
+}
+.footer .fa-book{
+  color: var(--primary);
+}
+.footer .example{
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer
+{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-top: 1px solid var(--lighter);
+  justify-content: center;
+  margin-top: 70px;
+}
+ul.icons{
+  display: flex;
+}
+.footer div p:hover{
+ transform: translateX(10px);
+ color: var(--primary);
+}
+.footer div p{
+cursor: pointer;
+transition: all .4s;
+}
+ul.icons li:hover{
+  background-color: var(--accent);
+}
+ul.icons li:hover i{
+  color: var(--lighter);
+}
+ul.icons li i{
+  transition: all .5s;
+  color: var(--accent);
+}
+ul.icons li{
+/* padding-inline: 5px; */
+background-color: var(--lighter);
+margin-inline: 5px;
+padding: 7px;
+border-radius: 50%;
+transition: all .5s;
+}
+.info{
+  padding: 10px 30px;
+}
+.Bookery{
+  padding: 10px 40px;
+}
+.Explore{
+  padding: 10px 40px;
+}
+.Service{
+  padding: 10px 40px;
+}
+.Categories{
+  padding: 10px 40px;
+}
+.footer h1{
+  position: relative;
+}
+.footer h1:hover::after{
+  height: 90%;
+}
+.footer h1::after{
+  content: '';
+  width: 100%;
+  height: 2px;
+  /* margin: auto; */
+  z-index: -1;
+  transition: all .6s;
+  background-color: var(--lighter);
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  left: 0;
+}
+@media(max-width:768px)
+{
+  .footer{
+    flex-direction: column;
+  }
+}
+.logo-span {
+  position: relative;
+  cursor: pointer;
+}
+.logo-span:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; 
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 40px 70px;
+}
+.first {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: center;
+}
+.logo {
+  position: relative;
+  width: 150px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+  /*  *********************** page contact ************************ */
+  .contact-section {
+    padding: 80px 0;
+  }
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; 
+    position: relative;
+    height: 0;
+  }
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .book-store-section {
+    padding: 50px 0;
+}
+.store-location img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.store-info {
+    text-align: center;
+    margin-top: 15px;
+}
+.store-info h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.store-info p {
+    margin-bottom: 5px;
+}
+.working-hours {
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 20px;
+  }
+  .book-store-section {
+    width: 80%;
+  }
+  .banner h1 {
+    font-weight: 600;
+    font-size: 35px;
+}
+}

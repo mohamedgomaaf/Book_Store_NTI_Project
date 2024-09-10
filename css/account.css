@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primary: #f65d4e;
+    --primary_hover: #f4402f;
+    --text: #444444;
+    --accent: #000000;
+    --lighter: #999999;
+    --border: #e6e6e6;
+    --ff: system-ui;
+}
+body {
+    font-family: "Roboto", system-ui;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.MyAccount-article1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:#f0f0f0;
+    padding: 40px 20px;
+}
+.MyAccount-article1 h1 {
+    font-size: 80px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: var(--ff);
+}
+.MyAccount-article1 .links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.MyAccount-article1 .links a {
+    text-decoration: none;
+    color: var(--lighter);
+    text-transform: uppercase;
+    font-family: var(--ff);
+    transition: 0.1s ease-in;
+}
+.MyAccount-article1 .links a:hover {
+    color: black;
+    font-weight: 400;
+}
+.MyAccount-article1 .links i {
+font-size: 14px;}
+.MyAccount-article1 .links p {
+    color: var(--primary);
+    text-transform: capitalize;
+    font-family: var(--ff);
+    font-size: 14px;
+}
+.MyAccount-article2 {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    margin: 40px 0;
+}
+.MyAccount-article2 .login {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}
+.MyAccount-article2 h3 {
+    font-family: var(--ff);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label {
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#email1, #email2, #pass1, #pass2, #num{
+    padding: 17px 0 17px 20px;
+    border: 0.1px solid #99999961;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #444444;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+#email1:focus, #email2:focus, #pass1:focus, #pass2:focus, #num:focus {
+    border: 1px solid black;
+}
+.last-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.last-login a {
+    color: var(--lighter);
+}
+.last-login a:hover {
+    color: var(--primary);
+}
+input[type="submit"]{
+    padding: 15px 10px;
+    border: 0.1px solid transparent;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: var(--primary_hover);
+}
+.MyAccount-article2 .rigester {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}
+@media (max-width: 1170px) {
+    .MyAccount-article2 {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        margin: 40px 0;
+    }
+    .MyAccount-article2 .login {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+    }
+    .MyAccount-article2 h3 {
+        font-family: var(--ff);
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    #email1, #email2, #pass1, #pass2, #num{
+        padding: 17px 0 17px 20px;
+        border: 0.1px solid #99999961;
+        outline: none;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #444444;
+        border-radius: 50px;
+        margin-bottom: 20px;
+    }
+    .last-login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .last-login a {
+        color: var(--lighter);
+        font-size: 12px;
+    }
+    #box-label {
+        font-size: 14px;
+    }
+    .MyAccount-article2 .rigester {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+    }
+}
+@media (max-width: 830px) {
+    .MyAccount-article1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:#f0f0f0;
+        padding: 40px 10px;
+    }
+    .MyAccount-article1 h1 {
+        font-size: 60px;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: var(--ff);
+    }
+    .MyAccount-article1 .links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .MyAccount-article1 .links a {
+        text-decoration: none;
+        color: var(--lighter);
+        text-transform: uppercase;
+        font-family: var(--ff);
+        transition: 0.1s ease-in;
+    }
+    .MyAccount-article1 .links a:hover {
+        color: black;
+        font-weight: 400;
+    }
+    .MyAccount-article1 .links i {
+    font-size: 14px;}
+    .MyAccount-article1 .links p {
+        color: var(--primary);
+        text-transform: capitalize;
+        font-family: var(--ff);
+        font-size: 14px;
+    }
+    .MyAccount-article2 {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        margin: 40px 0;
+    }
+    .MyAccount-article2 .login {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+    }
+    .MyAccount-article2 h3 {
+        font-family: var(--ff);
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    #email1, #email2, #pass1, #pass2, #num{
+        padding: 17px 0 17px 20px;
+        border: 0.1px solid #99999961;
+        outline: none;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #444444;
+        border-radius: 50px;
+        margin-bottom: 20px;
+    }
+    .last-login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+    .last-login a {
+        color: var(--lighter);
+        font-size: 12px;
+    }
+    #box-label {
+        font-size: 12px;
+    }
+    .MyAccount-article2 .rigester {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+    }
+}
+@media (max-width: 694px) {
+    .MyAccount-article1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:#f0f0f0;
+        padding: 40px 10px;
+    }
+    .MyAccount-article1 h1 {
+        font-size: 40px;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: var(--ff);
+    }
+    .MyAccount-article1 .links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .MyAccount-article1 .links a {
+        font-size: 12px;
+        text-decoration: none;
+        color: var(--lighter);
+        text-transform: uppercase;
+        font-family: var(--ff);
+        transition: 0.1s ease-in;
+    }
+    .MyAccount-article1 .links a:hover {
+        color: black;
+        font-weight: 400;
+    }
+    .MyAccount-article1 .links i {
+    font-size: 12px;
+}
+    .MyAccount-article1 .links p {
+        color: var(--primary);
+        text-transform: capitalize;
+        font-family: var(--ff);
+        font-size: 12px;
+    }
+    .MyAccount-article2 {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+        /* justify-content: center; */
+        align-items: center;
+        margin: 40px 0;
+    }
+    .MyAccount-article2 .login {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+    }
+    .MyAccount-article2 h3 {
+        font-family: var(--ff);
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    #email1, #email2, #pass1, #pass2, #num{
+        padding: 17px 0 17px 20px;
+        border: 0.1px solid #99999961;
+        outline: none;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #444444;
+        border-radius: 50px;
+        margin-bottom: 20px;
+    }
+    .last-login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .last-login a {
+        color: var(--lighter);
+        font-size: 16px;
+    }
+    #box-label {
+        font-size: 18px;
+    }
+    .MyAccount-article2 .rigester {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 10px;
+    }
+}
+@media (max-width: 470px) {
+    .MyAccount-article1 h1 {
+        font-size: 35px;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: var(--ff);
+    }
+    .MyAccount-article1 .links {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .MyAccount-article1 .links a {
+        text-decoration: none;
+        color: var(--lighter);
+        text-transform: uppercase;
+        font-family: var(--ff);
+        transition: 0.1s ease-in;
+    }
+    .MyAccount-article1 .links a:hover {
+        color: black;
+        font-weight: 400;
+    }
+    .MyAccount-article1 .links i {
+    font-size: 10px;}
+    .MyAccount-article1 .links p {
+        color: var(--primary);
+        text-transform: capitalize;
+        font-family: var(--ff);
+        font-size: 12px;
+    }
+}
