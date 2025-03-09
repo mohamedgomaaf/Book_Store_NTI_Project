@@ -14,6 +14,25 @@ var slider = setInterval(() => {
   circle[currentIndex].classList.add("circle_active");
 }, 8000);
 
+// Add click functionality to circles to change slider
+circle.forEach((circleElement, index) => {
+  circleElement.addEventListener("click", () => {
+    clearInterval(slider);
+    sliders[currentIndex].style.display = "none";
+    circle[currentIndex].classList.remove("circle_active");
+    currentIndex = index;
+    sliders[currentIndex].removeAttribute("style");
+    circle[currentIndex].classList.add("circle_active");
+    slider = setInterval(() => {
+      sliders[currentIndex].style.display = "none";
+      circle[currentIndex].classList.remove("circle_active");
+      currentIndex = (currentIndex + 1) % sliders.length;
+      sliders[currentIndex].removeAttribute("style");
+      circle[currentIndex].classList.add("circle_active");
+    }, 8000);
+  });
+});
+
 // slider-section
 document.querySelectorAll(".book img").forEach((bookImg) => {
   bookImg.addEventListener("mouseover", () => {
@@ -153,4 +172,3 @@ document.querySelector("#prev_22").addEventListener("click", () => {
   const prevImage = gallerySpans[currentIndex].querySelector("img").src; 
   document.querySelector(".layer-content img").src = prevImage;
 });
- 
